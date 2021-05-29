@@ -28,14 +28,28 @@ def find_slot(pin_code, date_time, age=18):
                     playsound('sound.wav')
 
 
-today = datetime.datetime.today()
-nextDay = datetime.datetime.today() + datetime.timedelta(days=1)
-date_time_today = today.strftime("%d-%m-%Y")
-date_time_nextDay = nextDay.strftime("%d-%m-%Y")
+if __name__ == '__main__':
+    today = datetime.datetime.today()
+    date_time_today = today.strftime("%d-%m-%Y")
+    pin_codes = list()
+    age = ""
+    while True:
+        if not age:
+            age = input('Enter the age group 18/45: ')
+            if age != '18' and age != '45':
+                print("invalid age group. Please enter 18 or 45")
+                age = ""
+                time.sleep(1)
+        else:
+            pincode = input("Please enter pincode (if there are no more pincode, press enter.):")
+            if not pincode:
+                break
+            pin_codes.append(pincode)
 
-while True:
-    pin_codes = ["400703", "400705", "400710", "400614", "400701"]
-    print(date_time_nextDay)
-    for pin in pin_codes:
-        find_slot(pin, date_time_nextDay, 18)
-    time.sleep(120)
+    while True:
+        # pin_codes = ["400703", "400705", "400710", "400614", "400701"]
+        print(date_time_today)
+        # print(pin_codes)
+        for pin in pin_codes:
+            find_slot(pin, date_time_today, int(age))
+        time.sleep(120)
