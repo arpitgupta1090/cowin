@@ -1,8 +1,8 @@
 # cowin
 
 A simple python function thats calls Govenment's ApiSethu Cowin portal to get available vaccine slots near you.
-It takes a list of pincode and age(18/45) as input and provides a list of hospital and number of slots available for that age group in the area mentioned in pincodes.
-It also generated a alarm sound whenever there is availability. 
+It takes a list of pincodes and age(18/45) as input and provides a list of hospitals and number of slots available for that age group in the area belonging to pincodes.
+It also generated an alarm sound whenever there is an availability. 
 
 ## Usage
 
