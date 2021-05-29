@@ -11,8 +11,8 @@ import requests
 import json
 import datetime
 import time
-
 from playsound import playsound
+
 today = datetime.datetime.today()
 nextDay = datetime.datetime.today() + datetime.timedelta(days=1)
 date_time_today = today.strftime("%d-%m-%Y")
