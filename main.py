@@ -35,7 +35,7 @@ date_time_nextDay = nextDay.strftime("%d-%m-%Y")
 
 while True:
     pin_codes = ["400703", "400705", "400710", "400614", "400701"]
-    print(date_time_nextDay)
+    print(date_time_today)
     for pin in pin_codes:
         find_slot(pin, date_time_nextDay, 18)
     time.sleep(120)
