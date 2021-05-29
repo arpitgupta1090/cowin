@@ -1,28 +1,27 @@
 # cowin
 
-A simple python function thats calls Govenment's ApiSethu Cowin portal to get available vaccine slots near you.
+A simple python function that calls Government's ApiSethu Cowin portal to get available vaccine slots near you.
 It takes a list of pincodes and age(18/45) as input and provides a list of hospitals and number of slots available for that age group in the area belonging to pincodes.
 It also generated an alarm sound whenever there is an availability. 
 
-## Usage
 
-```python
-import requests
-import json
-import datetime
-import time
-from playsound import playsound
+## Installation
 
-today = datetime.datetime.today()
-nextDay = datetime.datetime.today() + datetime.timedelta(days=1)
-date_time_today = today.strftime("%d-%m-%Y")
-date_time_nextDay = nextDay.strftime("%d-%m-%Y")
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
-while True:
-    pin_codes = ["400703", "400705", "400710", "400614", "400701"]
-    print(date_time_nextDay)
-    for pin in pin_codes:
-        find_slot(pin, date_time_nextDay, 18)
-    time.sleep(120)
+```bash
+pip install requests
+pip install playsound
 ```
 
+## Usage
+
+```bash
+python main.py
+```
+Enter the age group 18/45: 45
+Please enter pincode (if there are no more pincode, press enter.):400703
+
+Please enter pincode (if there are no more pincode, press enter.):400705
+
+Please enter pincode (if there are no more pincode, press enter.):
